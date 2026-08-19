@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArenaCash — Indique um amigo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #12325b;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, #ffffff 0%, #f2f8ff 100%);
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: #e4f1ff;
+      top: -250px;
+      right: -180px;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: #f0f7ff;
+      bottom: -180px;
+      left: -120px;
+    }
+
+    .content {
+      width: min(1100px, 88%);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 70px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #1264c7;
+      margin-bottom: 55px;
+    }
+
+    .brand span {
+      color: #12325b;
+    }
+
+    h1 {
+      font-size: clamp(48px, 6vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
+      color: #12325b;
+    }
+
+    h1 strong {
+      color: #1264c7;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      line-height: 1.5;
+      color: #58708d;
+      max-width: 580px;
+      margin-bottom: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 17px 32px;
+      border-radius: 12px;
+      background: #1264c7;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(18, 100, 199, 0.22);
+    }
+
+    .visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cash-card {
+      width: 330px;
+      height: 330px;
+      border-radius: 42px;
+      background: #1264c7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 25px 60px rgba(18, 100, 199, 0.25);
+      transform: rotate(4deg);
+    }
+
+    .cash-card .amount {
+      font-size: 72px;
+      font-weight: 800;
+      letter-spacing: -4px;
+    }
+
+    .cash-card .label {
+      margin-top: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .cash-card .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 800px) {
+      .slide {
+        min-height: 100vh;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+      }
+
+      .brand {
+        margin-bottom: 35px;
+      }
+
+      .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .visual {
+        display: none;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="slide">
+    <div class="content">
+
+      <section>
+        <div class="brand">
+          Arena<span>Cash</span>
+        </div>
+
+        <h1>
+          Indique um amigo<br>
+          e ganhe <strong>R$ 50</strong>
+        </h1>
+
+        <p class="subtitle">
+          Compartilhe a ArenaCash com seus amigos e ganhe R$ 50
+          quando eles entrarem para a nossa comunidade.
+        </p>
+
+        <a href="#" class="button">
+          Saiba mais
+        </a>
+      </section>
+
+      <section class="visual">
+        <div class="cash-card">
+          <div class="icon">↗</div>
+          <div class="amount">R$ 50</div>
+          <div class="label">para você</div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>
+```
